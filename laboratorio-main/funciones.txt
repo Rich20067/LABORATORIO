@@ -1,0 +1,39 @@
+fun main() {
+    printBorder("*")
+    println("Hola(moviles-Diego)")
+    printBorder("=")
+
+    val sum = calculateSum(10, 9)
+    println("Sum: $sum")
+
+    displayBirthdayMessage("Alejo", 19)
+
+    println("The area of the rectangle is ${calculateRectangleArea(5.0, 10.0)}")
+    println("The area of the circle is ${calculateCircleArea(7.0)}")
+}
+
+fun printBorder(border: String) {
+    repeat(23) {
+        print(border)
+    }
+    println()
+}
+
+fun calculateSum(a: Int, b: Int): Int {
+    val a = (0..20).random()
+    val b = (0..20).random()
+    return a + b
+}
+
+fun displayBirthdayMessage(name: String, age: Int) {
+    println("Happy Birthday, $name!")
+    println("You are now $age years old!")
+}
+
+fun calculateRectangleArea(length: Double, width: Double): Double {
+    return length * width
+}
+
+fun calculateCircleArea(radius: Double): Double {
+    return Math.PI * radius * radius
+}

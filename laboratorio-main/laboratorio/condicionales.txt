@@ -1,0 +1,44 @@
+fun main() {
+
+    val age = 18
+    if (age >= 18) {
+        println("Eres Adulto.")
+    } else {
+        println("No eres Adulto.")
+    }
+
+    val isSunny = true
+    val isWeekend = true
+    if (isSunny && isWeekend) {
+        println("vamos para la playa!")
+    } else {
+        println("Vamos a quedarnos en casa.")
+    }
+
+
+    var name: String? = "Alejo"
+    println(name?.length)
+
+
+    val length = name?.length ?: 0
+    println("Length: $length")
+
+
+    open class Person(val name: String, var age: Int) {
+        open fun introduce() {
+            println("Hola, mi nombre  es $name y yo tengo $age años de edad.")
+        }
+    }
+
+    class Student(name: String, age: Int, val sena: String) : Person(name, age) {
+        override fun introduce() {
+            println("hola soy $name, yo tengo $age años y estudio en $sena.")
+        }
+    }
+
+    val person = Person("Alice", 30)
+    person.introduce()
+
+    val student = Student("Bob", 20, "sena")
+    student.introduce()
+}
